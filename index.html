@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            border:1px solid black;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <script>
+        
+          let input1=document.createElement('input');
+          document.body.append(input1);
+   
+          input1.after("+");
+        
+          let input2 =document.createElement('input');
+          document.body.append(input2);
+        
+            let btn=document.createElement("button");
+          document.body.append(btn);
+          btn.classList.add("score");
+        
+          btn.textContent="=";
+         let result=document.createElement("div");
+          result.style.display="inline-block"
+          document.body.append(result);
+       
+        document.querySelector(".score").addEventListener("click",()=>{
+        let a = input1.value;
+        let b = input2.value;
+        let wynik =parseFloat(a)+parseFloat(b);
+            
+            result.textContent=parseFloat(wynik);
+        })
+         
+
+    
+    </script>
+</body>
+</html>
